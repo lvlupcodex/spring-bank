@@ -1,0 +1,20 @@
+{
+  "name": "RockyLinux + Java Spring",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "remoteUser": "root",
+  "postCreateCommand": "echo '🐺 Codespace limpio y listo.'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "pivotal.vscode-spring-boot"
+      ]
+    }
+  }
+}
