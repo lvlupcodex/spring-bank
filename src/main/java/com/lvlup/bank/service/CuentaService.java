@@ -27,10 +27,11 @@ public class CuentaService{
     //EL ORDEN: Tipo de objeto y objeto
     //NECESITO DE TIPO Cuenta un objeto cuenta
     //momento mayus
-    public Cuenta crear(Cuenta cuenta){
-        //SAVE ME HACE UPDATE SI YA EXISTIA ID
+    public Cuenta crear(Cuenta cuenta) {
+        System.out.println("GUARDANDO CUENTA: " + cuenta.getNombreTitular());
         return cuentaRepository.save(cuenta);
     }
+    
     /* TENEMOS PUT, vamos a probarlo CON POSTMAN :D
 
             PUT /cuentas/1
