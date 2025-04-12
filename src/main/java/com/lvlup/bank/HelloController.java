@@ -9,5 +9,5 @@ public class HelloController {
     @GetMapping("/")
     public String hello() {
         return "¡Hola Spring Boot desde Codespace guanajo!";
-    }
+    } 
 }
