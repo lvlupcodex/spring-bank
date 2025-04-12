@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Service 
 public class CuentaService{
-    //Private final lo que es (clase) y el objeto
+    //Private (no sale de esta clase) final (no se puede reasignar una vez init) lo que es (clase) y el nombre de la variable que es un objeto de la instancia cuentaRepository
     private final CuentaRepository cuentaRepository; 
 
     public CuentaService(CuentaRepository cuentaRepository){
@@ -28,8 +28,18 @@ public class CuentaService{
     //NECESITO DE TIPO Cuenta un objeto cuenta
     //momento mayus
     public Cuenta crear(Cuenta cuenta){
+        //SAVE ME HACE UPDATE SI YA EXISTIA ID
         return cuentaRepository.save(cuenta);
     }
+    /* TENEMOS PUT, vamos a probarlo CON POSTMAN :D
+
+            PUT /cuentas/1
+            {
+            "nombreTitular": "Laura Burns",
+            "saldo": 9999.99
+            }
+            Y se actualiza en la BBDD si existe una cuenta con ID 1. 
+            RECUERDA SIEMPRE EN DEPENDENCIES (pom.xml) PONER SWAGGER UI*/
     public void eliminar(Long id){
         cuentaRepository.deleteById(id);
     }
