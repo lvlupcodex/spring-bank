@@ -3,7 +3,7 @@ import com.lvlup.bank.model.Cuenta;
 import com.lvlup.bank.repository.CuentaRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.list; 
+import java.util.List; 
 import java.util.Optional;
 
 @Service 

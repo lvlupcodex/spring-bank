@@ -3,7 +3,7 @@ package com.lvlup.bank.controller;
 import com.lvlup.bank.model.Cuenta;
 import com.lvlup.bank.service.CuentaService;
 import org.springframework.web.bind.annotation.*;
-import java.util.list;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
